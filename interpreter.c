@@ -311,7 +311,7 @@ int main(int argc, char *argv[]) //pobieranie polecenia, rozdzielanie do na czł
     int sigusr_handler = fork(); //obsluga sygnału , fork()-słuzy do tworzenia nowego procesu będącego kopią procesu wywołującego daną funkcję 
     if(sigusr_handler == 0) while(1) sleep(1);
 
-    puts("My simple bash.\n");
+    puts("Nasz shell.\n");
     if(argc >= 3)
     {
         for(i=0; i<100; ++i) cmd[i]=0;
@@ -386,7 +386,7 @@ int main(int argc, char *argv[]) //pobieranie polecenia, rozdzielanie do na czł
             else if(hashed_command == command[3] && args_num == 1) kill(sigusr_handler, SIGUSR1); 
 
             else if(hashed_command == command[4] && args_num == 1)
-                puts("\nSimple bash developed by Konrad Gardocki,Robert Gr\B9dzki and Daniel Grygiewicz\n");
+                puts("\nBash developed by Karolina Grodzka, Ewa Kulesza, Damian Kiolbasa\n");
             else if(hashed_command == command[5] && args_num == 1)
             {
                 mkfifo("fifoexample", 0666);//utworzy nowy plik FIFO
